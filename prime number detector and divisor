@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int n=0,n1,num;
+    printf("Enter the number you want to check is prime number or not :");
+    scanf("%d",&num);
+    //taking input from user
+    n1 = 1;
+    //now going to check wheteher the given number is a prime number
+    while(n1<=num)
+    {
+        if(num%n1==0)
+        {
+            //Displaying all divisor
+            printf("The divisor are : %d\n",n1);
+            n++;
+        }
+        n1++;
+    }
+    if(n>2)
+    {
+        printf("This is a prime number\n ");
+    }
+    else
+    {
+        printf("This is not a prime number \n");
+    }
+    // Telling about the number of divisor
+    printf("The number of divisor for your number is : %d",n);
+}
