@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+struct truck
+{
+    char name[34];
+    char driv_lic[34];
+    char route[34];
+    int kms;
+};
+
+int main()
+{
+    struct truck agency;
+    printf("Enter your name ");
+    scanf("%s",&agency.name);
+    printf("Enter your driving licence:");
+    scanf("%s",&agency.driv_lic);
+    printf("Enter the number of kilometer you travel with us:");
+    scanf("%d",&agency.kms);
+    printf("Enter the route of driver");
+    scanf("%s", &agency.route);
+    printf("Welcome to hassan travel agency ");
+    printf("Name of driver: %s\n",agency.name);
+    printf("The route of the driver: %s\n",agency.route);
+    printf("Kilometer drives with our agency: %d\n",agency.kms);
+    printf("The license of driver is: %c",agency.driv_lic);
+    return(0);
+}
