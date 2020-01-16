@@ -1,0 +1,9 @@
+# include<stdio.h>
+int main()
+{
+    int value = 0;
+    while(value<=255){
+        printf("Your ASCII value of %d is %c\n",value,value);
+        value++;
+    }
+}
