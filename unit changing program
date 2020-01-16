@@ -1,0 +1,51 @@
+# include<stdio.h>
+
+int  main()
+{
+    int i;
+    double length;
+    double length_1;
+    double length_2;
+    double weight;
+    double length_3;
+    printf("Enter any number from following:  1: km to mile  2:inch to foot  3:cms to meter  4:pound to kg  5:inches to meter: ");
+    scanf ("%d" , &i);
+    switch(i)
+    {
+        case(1):
+    printf("Enter the length:");
+    scanf("%lf", & length);
+    double mile = 0.621;
+    double km = length*mile;
+    printf("your entered length in mile is:%lf\n", km);
+    break;
+    case(2):
+    printf("Enter the length:");
+    scanf("%lf", & length_1);
+    double foot = 0.0833333;
+    double inch = length_1*foot;
+    printf("your entered length in foot is:%lf\n",inch);
+    break;
+    case(3):
+    printf("Entered length in cm:");
+    scanf("%lf", &length_2);
+    double inches = 0.393701;
+    double cm = length_2*inches;
+    printf("your entered length in inches:%lf\n",cm);
+    case(4):
+    printf("Entered weight in pounds:");
+    scanf("%lf", &weight);
+    double pound= 0.453592;
+    double kg = weight*pound;
+    printf("Your entered weight in kg is:%lf\n",kg);
+    case(5):
+    printf("Enter the length in inches:");
+    scanf("%lf",&length_3);
+    double inch1=0.0254;
+    double meter = length_3*inch1;
+    printf("your entered length in inches:%lf\n",meter);
+    break; 
+    default:
+    printf("You enter the wrong number\n");
+    }
+}
