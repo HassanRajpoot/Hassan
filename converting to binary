@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<math.h>
+long int binary(long int n)
+{
+    int k = 0,l = n,p = 0,b = 10;
+    long int z,m,sum = 0;
+    while(l!=1)
+   {
+       k++;
+       l = l/2;
+   }
+   for(;p<=k;p++)
+   {
+       m = n%2;
+       n = n/2;
+       if(p>=1)
+       {
+           if(m!=0)
+           {
+                  z = pow(b,p);
+                  m = m*z;
+                  sum =sum+m;
+           }
+
+       }
+          else
+           {
+               sum = sum+m;
+           }
+
+   }
+    return sum;
+}
+int main()
+{
+   long int n;
+   printf("Enter any number: ");
+   scanf("%ld",&n);
+   printf("Your binary is: %ld",binary(n));
+}
