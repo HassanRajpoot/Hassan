@@ -1,0 +1,21 @@
+#include <stdio.h>
+int printcomma(int n)
+{
+    if (n < 1000)
+    {
+        printf("%d",n);
+        return;
+    }
+    // this will execute this function and move it to the next line
+    printcomma2(n/1000);
+    //here the remaining which will be less than 1000 will be print in this manner 1,000
+    printf(",%03d",n%1000);
+}
+int main()
+{
+    int n;
+    //taking input from the user for placing commas
+    printf("Enter any number");
+    scanf("%d",&n);
+    printcomma(n);
+}
