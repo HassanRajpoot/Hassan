@@ -1,0 +1,54 @@
+//This program takes the range of values from the user then add even number in those range of value and check that it is equal to (n(n+1))/2
+# include<stdio.h>
+int main()
+{
+    int x1,x2,x1c,sum = 0,multiply;
+    // Take 2 inputs from the user
+    printf("Enter the first value to computes the sum of even value:");
+    scanf("%d",&x1);
+    printf("Enter the second value to computes the sum of even value:");
+    scanf("%d",&x2);
+    x1c = x1;
+    //Check whether the 1st value is smaller or larger to calculate the sum
+    if(x1<x2)
+    {
+        //Check whether values are even or odd
+        if(x1%2!=0){
+            x1++;
+        }
+        else if(x2%2!=0){
+                x2--;
+        }
+        printf("The sum [");
+        while(x1<=x2)
+        {
+            sum = sum+x1;
+            printf("%d",x1);
+            if(x1 < x2){
+                printf(" + ");
+            }
+            x1 = x1+2;
+        }
+        printf("] is :%d\n",sum);
+    }
+    else{
+        printf("Wrong input");
+    }
+     printf("The sum [");
+        while(x1c<=x2)
+        {
+            printf("%d",x1c);
+            if(x1c < x2){
+                printf(" + ");
+            }
+            x1c = x1c+1;
+        }
+        multiply = (x2*(x2+1))/2;
+        printf("] is :%d\n",multiply);
+        if(multiply == sum){
+            printf("both value are equal\n");
+        }
+        else{
+            printf("both value are not equal\n");
+        }
+}
