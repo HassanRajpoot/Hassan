@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    char a;
+    int l;
+	printf("enter the character to check wether it is a vowel\n");
+    scanf("%c",&a);
+    l = a =='a'|| a =='e' || a == 'i' || a=='o'  || a=='u';
+    printf("%d\n", l);
+	return 0;
+}
