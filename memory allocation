@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n;
+    char *ptr;
+	printf("This function is used to enter employee data");
+    printf("Enter length of employee1 id");
+    scanf("%d",&n);
+    ptr =(char*) calloc(n, sizeof(char));
+    printf("Enter your id");
+    scanf("%c", ptr);
+	return 0;
+}
