@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int a,sum;
+    printf("Enter the number of which you want to find different ways of sum :");
+    scanf("%d",&a);
+    printf("Different ways of showing is :\n");
+    for(int b = 1;b<=a;b++)
+    {
+        for(int c = 1;c<=a;c++)
+        {
+            for(int d = 1;d<=a;d++)
+            {
+                sum = c+b+d;
+                if(sum == a)
+                {
+                    printf("%d+%d+%d = %d\n",c,b,d,sum);
+                }
+            }
+        }
+    }
+}
