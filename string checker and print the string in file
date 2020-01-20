@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    FILE *file1,*file2,*output;
+    char str1[30],str2[30];
+    int len,i,j =1,k=0,len1,len2;
+    char string1[60];
+    file1 = fopen("file1.txt","w+");
+    file2 = fopen("file2.txt","w+");
+    output = fopen("output.txt","w+");
+    printf("Enter your shortest string:");
+    gets(str1);
+    fprintf(file1,"%s",str1);
+    len = strlen(str1);
+    printf("Enter your longest string:");
+    gets(str2);
+    fprintf(file2,"%s",str2);
+    for(i=0;i<len;i++)
+    {
+        string1[k]=str1[i];
+        string1[j]=str2[i];
+        j = j+2;
+        k = k+2;
+    }
+    len1 = strlen(str2);
+    len2 = strlen(string1);
+    for(i = len ; i<=len1;i++)
+    {
+        string1[len2] = str2[i];
+        len2++;
+    }
+    printf("%s",string1);
+    fprintf(output,"%s",string1);
+}
