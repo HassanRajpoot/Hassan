@@ -22,16 +22,12 @@ void parser(char * string)
     }
     string[index] = '\0';
 
-    //Remove the trailing spaces from the beginning
-    while(string[0] ==' '){
-        //Shift the string to the left
+   while(string[0] ==' '){
         for (int i = 0; i < strlen(string); i++)
         {
-            /* code */
             string[i] = string[i+1];
         }
     }
-    //Remove the trailing spaces from the end
     while(string[strlen(string) - 1] == ' ')
     {
         string[strlen(string) - 1] = '\0';
@@ -43,7 +39,7 @@ void parser(char * string)
 
 int main()
 {
-    char string[] = "    <harrysdfsdfsdf>this is a heading    </harry>     ";
+    char string[] = "    <hassan rajputf>this is a heading    <h23>     ";
     parser(string);
     printf("The parsed string is ~~%s~~", string);
     return 0;
