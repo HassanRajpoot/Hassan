@@ -1,0 +1,36 @@
+# include <stdio.h>
+int main()
+{
+    int i;
+    int transfer;
+    printf("Enter the following operation \n1) inverted star traingular pattern \n2)straight star triangular pattern :");
+    scanf("%d",&transfer);
+    switch(transfer)
+    {
+    case(1):
+    printf("Enter any number:");
+    scanf("%d",&i);
+    for (int n=1; n<=i ;i--)
+    {
+        for (int s=1; s<=i; s++){
+        printf("*");
+        printf(" ");
+        }
+        printf("\n");
+    }
+    break;
+    case(2):
+    printf("Enter any number:");
+    scanf("%d",&i);
+    for (int n=1; n<=i ;n++)
+    {
+        for (int s=1;s<=n ; s++){
+        printf("*");
+        printf(" ");
+        }
+        printf("\n");
+    }
+    break;
+    }
+    return(0);
+}
