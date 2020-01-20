@@ -1,0 +1,35 @@
+# include<stdio.h>
+int main()
+{
+    int x1,x2,sum = 0;
+    // Take 2 inputs from the user
+    printf("Enter the first value to computes the sum of even value:");
+    scanf("%d",&x1);
+    printf("Enter the first value to computes the sum of even value:");
+    scanf("%d",&x2);
+    //Check whether the 1st value is smaller or larger to calculate the sum 
+    if(x1<x2)
+    {
+        //Check whether values are even or odd
+        if(x1%2!=0){
+            x1++;
+        }
+        else if(x2%2!=0){
+                x2--;
+        }
+        printf("The sum [");
+        while(x1<=x2)
+        {
+            sum = sum+x1;
+            printf("%d",x1);
+            if(x1 < x2){
+                printf(" + ");
+            }
+            x1 = x1+2;
+        }
+        printf("] is :%d",sum);
+    }
+    else{
+        printf("Wrong input");
+    }
+}
