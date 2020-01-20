@@ -1,0 +1,239 @@
+#include<stdio.h>
+int main()
+{
+    char Grade;
+    int Basic_pay,Gross_pay,income_tax_rate,increment,House_rent_allowance,social_security_benefits,Ad_hoc_relief,income_tax,Gross_pay_deduction,Total_deduction,Runnig_pay,Net_pay,Age,Experience,Total_pay;;
+    printf("Enter your Grade as above :");
+    scanf("%c",&Grade);
+    printf("Enter your age and years in institution:");
+    scanf("%d%d",&Age,&Experience);
+  if(Grade=='w'|| Grade=='W')
+    {
+        printf("Basic salary:\n");
+        increment = 700;
+        Basic_pay = 10000;
+        printf("Your basic salary is %d\n",Basic_pay);
+        
+        
+        //check your running pay
+        
+        
+        Runnig_pay = Basic_pay+(Experience*increment);
+        printf("Number of incrementrement is %d\n",Experience);
+        printf("Your runnig pay is %d\n",Runnig_pay);
+          
+        
+        //check your monthly allowance
+        
+        
+        printf("Allowance:\n\n");
+        House_rent_allowance = Runnig_pay*.45;
+        printf("Your house rent allowance is %d\n" ,House_rent_allowance);
+        social_security_benefits = Basic_pay * .3;
+        printf("Your social security benfit is %d\n",social_security_benefits);
+        if (Age==40||Age>40)
+        {
+            Ad_hoc_relief = 3000;
+        }
+        else
+            Ad_hoc_relief = 1500;
+            printf("Ad-hoc relief allowance %d\n",Ad_hoc_relief);
+            Total_pay = Runnig_pay+social_security_benefits+House_rent_allowance+Ad_hoc_relief;
+            printf("Your total pay is %d\n\n\n",Total_pay);
+            Gross_pay =Total_pay*12;
+        printf("Deduction:\n\n");
+        if(Gross_pay>0&&Gross_pay<=400000){
+            income_tax_rate = 0;
+        }
+        else if(Gross_pay>400000&&Gross_pay<=650000){
+            income_tax_rate =2.5;
+        }
+        else if(Gross_pay>650000&&Gross_pay<=1000000){
+            income_tax_rate =4.75;
+        }
+        else if(Gross_pay>1000000&&Gross_pay<=1500000){
+            income_tax_rate = 7;
+        }
+        else{
+            income_tax_rate =11.5;
+        }
+       income_tax =income_tax_rate*Gross_pay;
+        printf("Your income tax is %d\n",income_tax);
+        Gross_pay_deduction = (Total_pay*.1);
+        printf("Your genral provident fund is %d\n",Gross_pay_deduction);
+        Total_deduction =Gross_pay_deduction+income_tax;
+        printf("Total deduction is %d\n",Total_deduction);
+        Net_pay = Total_pay -Total_deduction;
+        printf("Your nt pay is %d",Net_pay);
+
+    }
+else if(Grade=='X'|| Grade=='x'){
+
+
+        printf("Basic salary:\n\n");
+        increment = 910;
+        Basic_pay = 12900;
+        printf("Your basic salary is %d\n",Basic_pay);
+        printf("Number of incrementrement is %d\n",Experience);
+                
+        
+        //check your running pay
+        
+        
+        Runnig_pay = Basic_pay+(Experience*increment);
+        printf("Your running pay is %d\n\n\n",Runnig_pay);
+          
+        
+        //check your monthly allowance
+        
+        
+        printf("Allowance:\n\n");
+        House_rent_allowance = Runnig_pay*.45;
+        printf("Your house rent allowance is %d\n" ,House_rent_allowance);
+        social_security_benefits = Basic_pay * .3;
+        printf("Your social security benfit is %d\n",social_security_benefits);
+            Ad_hoc_relief = 1500;
+            printf("Ad-hoc relief allowance %d\n",Ad_hoc_relief);
+            Total_pay = Runnig_pay+social_security_benefits+House_rent_allowance+Ad_hoc_relief;
+            printf("Your total pay is %d\n\n\n",Total_pay);
+            Gross_pay =Total_pay*12;
+        printf("Deduction:\n\n");
+        if(Gross_pay>0&&Gross_pay<=400000){
+            income_tax_rate = 0;
+        }
+        else if(Gross_pay>400000&&Gross_pay<=650000){
+            income_tax_rate =2.5;
+        }
+        else if(Gross_pay>650000&&Gross_pay<=1000000){
+            income_tax_rate =4.75;
+        }
+        else if(Gross_pay>1000000&&Gross_pay<=1500000){
+            income_tax_rate = 7;
+        }
+        else{
+            income_tax_rate =11.5;
+        }
+        income_tax =income_tax_rate*Gross_pay;
+        printf("Your incrementome tax is %d\n",income_tax);
+        Gross_pay_deduction = (Total_pay*.1)/12;
+        printf("Your genral provident fund is %d\n",Gross_pay_deduction);
+        Total_deduction = Gross_pay_deduction+income_tax;
+        printf("Total deduction is %d\n",Total_deduction);
+        Net_pay = Total_pay -Total_deduction;
+        printf("Your net pay is %d",Net_pay);
+}
+else if(Grade=='y'||Grade=='Y')
+    {
+
+        printf("Basic salary:\n\n");
+        increment = 1500;
+        Basic_pay = 21700;
+        printf("Your basic salary is %d\n",Basic_pay);
+        printf("Number of incrementrement is %d\n",Experience);
+                
+        
+        //check your running pay
+        
+        
+        Runnig_pay = Basic_pay+(Experience*increment);
+        printf("Your running pay is %d\n\n\n",Runnig_pay);
+          
+        
+        //check your monthly allowance
+        
+        
+        printf("Allowance:\n\n");
+        House_rent_allowance = Runnig_pay*.45;
+        printf("Your house rent allowance is %d\n" ,House_rent_allowance);
+        social_security_benefits = Basic_pay * .3;
+        printf("Your social security benfit is %d\n",social_security_benefits);
+            Ad_hoc_relief = 1500;
+            printf("Ad-hoc relief allowance %d\n",Ad_hoc_relief);
+            Total_pay = Runnig_pay+social_security_benefits+House_rent_allowance+Ad_hoc_relief;
+            printf("Your total pay is %d\n\n\n",Total_pay);
+            Gross_pay =Total_pay*12;
+        printf("Deduction:\n\n");
+        if(Gross_pay>0&&Gross_pay<=400000){
+            income_tax_rate = 0;
+        }
+        else if(Gross_pay>400000&&Gross_pay<=650000){
+            income_tax_rate =2.5;
+        }
+        else if(Gross_pay>650000&&Gross_pay<=1000000){
+            income_tax_rate =4.75;
+        }
+        else if(Gross_pay>1000000&&Gross_pay<=1500000){
+            income_tax_rate = 7;
+        }
+        else{
+            income_tax_rate =11.5;
+        }
+        income_tax =income_tax_rate*Gross_pay;
+        printf("Your income tax is %d\n",income_tax);
+        Gross_pay_deduction = (Total_pay*.1);
+        printf("Your genral provident fund is %d\n",Gross_pay_deduction);
+        Total_deduction =Gross_pay_deduction+income_tax;
+        printf("Total deduction is %d\n",Total_deduction);
+        Net_pay = Total_pay -Total_deduction;
+        printf("Your nt pay is %d",Net_pay);
+
+    }
+else if(Grade=='Z'||Grade=='z')
+{
+
+        printf("Basic salary:\n\n");
+        increment = 2800;
+        Basic_pay = 32600;
+        printf("Your basic salary is %d\n",Basic_pay);
+        printf("Number of incrementrement is %d\n",Experience);
+                
+        
+        //check your running pay
+        
+        
+        Runnig_pay = Basic_pay+(Experience*increment);
+        printf("Your running pay is %d\n",Runnig_pay);
+        
+        
+        //check your monthly allowance
+        
+        
+        printf("Allowance:\n\n");
+        House_rent_allowance = Runnig_pay*.45;
+        printf("Your house rent allowance is %d\n" ,House_rent_allowance);
+        social_security_benefits = Basic_pay * .3;
+        printf("Your social security benfit is %d\n",social_security_benefits);
+            Ad_hoc_relief = 1500;
+            printf("Ad-hoc relief allowance %d\n",Ad_hoc_relief);
+            Total_pay = Runnig_pay+social_security_benefits+House_rent_allowance+Ad_hoc_relief;
+            printf("Your total pay is %d\n",Total_pay);
+            Gross_pay =Total_pay*12;
+        printf("Deduction:\n\n");
+        if(Gross_pay>0&&Gross_pay<=400000){
+            income_tax_rate = 0;
+        }
+        else if(Gross_pay>400000&&Gross_pay<=650000){
+            income_tax_rate =2.5;
+        }
+        else if(Gross_pay>650000&&Gross_pay<=1000000){
+            income_tax_rate =4.75;
+        }
+        else if(Gross_pay>1000000&&Gross_pay<=1500000){
+            income_tax_rate = 7;
+        }
+        else if(Gross_pay>1500000){
+            income_tax_rate =11.5;
+        }
+        income_tax =income_tax_rate*Gross_pay;
+        printf("Your income tax is %d\n",income_tax);
+        Gross_pay_deduction = (Total_pay*.1);
+        printf("Your genral provident fund is %d\n",Gross_pay_deduction);
+        Total_deduction = Gross_pay_deduction+income_tax;
+        printf("Total deduction is %d\n",Total_deduction);
+        Net_pay = Total_pay -Total_deduction;
+        printf("Your nt pay is %d",Net_pay);
+
+    }
+
+
+}
