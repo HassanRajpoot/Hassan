@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+    char user = 'C';
+    int x = (user > 'a'&& user < 'z');
+    printf("%d\n", x);
+    return(0);
+}
