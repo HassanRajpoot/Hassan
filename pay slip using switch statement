@@ -1,0 +1,228 @@
+#include<stdio.h>
+int main()
+{
+    char grade;
+    int Age,EP,TP;
+    float BS,GP,ITR,INC,NE,HRA,SSB,ARA,IT,GPD,DN,TD,RP,NP;
+    printf("Grade are\n w\n y\n z\n x\n");
+    printf("Enter your grade as above mention :");
+    scanf("%c",&grade);
+    printf("Enter your age and years in institution:");
+    scanf("%d%d",&Age,&EP);
+    switch(grade){
+case 'W':
+case 'w':
+    {
+        printf("____________________________________________\n");
+        printf("Basic salary:\n\n");
+        INC = 700;
+        BS = 10000;
+        printf("Your basic salary is %f\n",BS);
+        RP = BS+(EP*INC);
+        printf("Number of increment is %d\n",EP);
+        printf("Your running pay is %f\n\n\n",RP);
+        printf("____________________________________________\n");
+        printf("Allowance:\n\n");
+        HRA = RP*.45;
+        printf("Your house rent allowance is %f\n" ,HRA);
+        SSB = BS * .3;
+        printf("Your social security benefit is %f\n",SSB);
+        if (Age==40||Age>40)
+        {
+            ARA = 3000;
+        }
+        else
+            ARA = 1500;
+            printf("Ad-hoc relief allowance %f\n",ARA);
+            TP = RP+SSB+HRA+ARA;
+            printf("Your total pay is %d\n\n\n",TP);
+            GP =TP*12;
+        printf("____________________________________________\n");
+        printf("Deduction:\n\n");
+        if(GP>0&&GP<=400000){
+            ITR = 0;
+        }
+        else if(GP>400000&&GP<=650000){
+            ITR =2.5;
+        }
+        else if(GP>650000&&GP<=1000000){
+            ITR =4.75;
+        }
+        else if(GP>1000000&&GP<=1500000){
+            ITR = 7;
+        }
+        else{
+            ITR =11.5;
+        }
+        IT =(ITR/100)*(GP/12);
+        printf("Your income tax is %f\n",IT);
+        GPD = (TP*.1);
+        printf("Your general provident fund is %f\n",GPD);
+        DN = TP%100;
+        printf("Donation deducted %f\n",DN);
+        TD = DN+GPD+IT;
+        printf("Total deduction is %f\n",TD);
+        NP = TP -TD;
+        printf("Your net pay is %f",NP);
+        break;
+    }
+case 'X':
+case'x':{
+
+        printf("____________________________________________\n");
+        printf("Basic salary:\n\n");
+        INC = 910;
+        BS = 12900;
+        printf("Your basic salary is %f\n",BS);
+        printf("Number of increment is %d\n",EP);
+        RP = BS+(EP*INC);
+        printf("Your running pay is %f\n\n\n",RP);
+        printf("____________________________________________\n");
+        printf("Allowance:\n\n");
+        HRA = RP*.45;
+        printf("Your house rent allowance is %f\n" ,HRA);
+        SSB = BS * .3;
+        printf("Your social security benefit is %f\n",SSB);
+            ARA = 1500;
+            printf("Ad-hoc relief allowance %f\n",ARA);
+            TP = RP+SSB+HRA+ARA;
+            printf("Your total pay is %d\n\n\n",TP);
+            GP =TP*12;
+        printf("____________________________________________\n");
+        printf("Deduction:\n\n");
+        if(GP>0&&GP<=400000){
+            ITR = 0;
+        }
+        else if(GP>400000&&GP<=650000){
+            ITR =2.5;
+            IT =ITR*GP;
+        }
+        else if(GP>650000&&GP<=1000000){
+            ITR =4.75;
+        }
+        else if(GP>1000000&&GP<=1500000){
+            ITR = 7;
+        }
+        else{
+            ITR =11.5;
+        }
+        IT =(ITR/100)*(GP/12);
+        printf("Your income tax is %f\n",IT);
+        GPD = (TP*.1)/12;
+        printf("Your general provident fund is %f\n",GPD);
+        DN = TP%100;
+        printf("Donation deducted %f\n",DN);
+        TD = DN+GPD+IT;
+        printf("Total deduction is %f\n",TD);
+        NP = TP -TD;
+        printf("Your net pay is %f",NP);
+        break;
+}
+case'Y':
+case'y':
+    {
+
+        printf("____________________________________________\n");
+        printf("Basic salary:\n\n");
+        INC = 1500;
+        BS = 21700;
+        printf("Your basic salary is %f\n",BS);
+        printf("Number of increment is %d\n",EP);
+        RP = BS+(EP*INC);
+        printf("Your running pay is %f\n\n\n",RP);
+        printf("____________________________________________\n");
+        printf("Allowance:\n\n");
+        HRA = RP*.45;
+        printf("Your house rent allowance is %f\n" ,HRA);
+        SSB = BS * .3;
+        printf("Your social security benefit is %f\n",SSB);
+            ARA = 1500;
+            printf("Ad-hoc relief allowance %f\n",ARA);
+            TP = RP+SSB+HRA+ARA;
+            printf("Your total pay is %d\n\n\n",TP);
+            GP =TP*12;
+        printf("____________________________________________\n");
+        printf("Deduction:\n\n");
+        if(GP>0&&GP<=400000){
+            ITR = 0;
+        }
+        else if(GP>400000&&GP<=650000){
+            ITR =2.5;
+        }
+        else if(GP>650000&&GP<=1000000){
+            ITR =4.75;
+        }
+        else if(GP>1000000&&GP<=1500000){
+            ITR = 7;
+        }
+        else{
+            ITR =11.5;
+        }
+        IT =(ITR/100)*(GP/12);
+        printf("Your income tax is %f\n",IT);
+        GPD = (TP*.1);
+        printf("Your general provident fund is %f\n",GPD);
+        DN = TP%100;
+        printf("Donation deducted %f\n",DN);
+        TD = DN+GPD+IT;
+        printf("Total deduction is %f\n",TD);
+        NP = TP -TD;
+        printf("Your net pay is %f",NP);
+        break;
+    }
+case'Z':
+case'z':
+    {
+
+        printf("____________________________________________\n");
+        printf("Basic salary:\n\n");
+        INC = 2800;
+        BS = 32600;
+        printf("Your basic salary is %f\n",BS);
+        printf("Number of increment is %d\n",EP);
+        RP = BS+(EP*INC);
+        printf("Your running pay is %f\n",RP);
+        printf("____________________________________________\n");
+        printf("Allowance:\n\n");
+        HRA = RP*.45;
+        printf("Your house rent allowance is %f\n" ,HRA);
+        SSB = BS * .3;
+        printf("Your social security benefit is %f\n",SSB);
+            ARA = 1500;
+            printf("Ad-hoc relief allowance %f\n",ARA);
+            TP = RP+SSB+HRA+ARA;
+            printf("Your total pay is %d\n",TP);
+            GP =TP*12;
+        printf("____________________________________________\n");
+        printf("Deduction:\n\n");
+        if(GP>0&&GP<=400000){
+            ITR = 0;
+        }
+        else if(GP>400000&&GP<=650000){
+            ITR =2.5;
+        }
+        else if(GP>650000&&GP<=1000000){
+            ITR =4.75;
+        }
+        else if(GP>1000000&&GP<=1500000){
+            ITR = 7;
+        }
+        else if(GP>1500000){
+            ITR =11.5;
+        }
+        IT =(ITR/100)*(GP/12);
+        printf("Your income tax is %f\n",IT);
+        GPD = (TP*.1);
+        printf("Your general provident fund is %f\n",GPD);
+        DN = TP%100;
+        printf("Donation deducted %f\n",DN);
+        TD = DN+GPD+IT;
+        printf("Total deduction is %f\n",TD);
+        NP = TP -TD;
+        printf("Your net pay is %f",NP);
+        break;
+    }
+default:
+    printf("Invalid input");
+    }
+}
