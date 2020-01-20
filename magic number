@@ -1,0 +1,25 @@
+//program to find the magic number eg 153 = 1^3+5^3+3^3
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    printf("Enter -1 to terminate from the loop");
+    int n,n1,n2,n3,sum,t =0;
+    printf("Enter any number: ");
+    scanf("%d",&n);
+    while(n!=-1)
+    {
+        n3 = n;
+        n1 = n3/100;
+        n3 = n3%100;
+        n2 = n3/10;
+        n3 = n3%10;
+        sum = (n1*n1*n1)+(n2*n2*n2)+(n3*n3*n3);
+        if(n==sum){
+            t++;
+        }
+       printf("Enter any number: ");
+       scanf("%d",&n);
+    }
+    printf("The total magic number are: %d",t);
+}
