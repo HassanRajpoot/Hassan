@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+int main()
+{
+    srand(time(NULL));
+    FILE *fp;
+    fp = fopen("data.txt","w+");
+    char  *article[] = {"the", "a", "one", "some","any"},articles[100] = {};
+    // articles array is intiliaze as null value
+    char  *noun[] = { "boy", "girl", "dog", "town","car"};// use as a pointer to point on a string
+    char  *verb[] = {"drove", "jumped", "ran", "walked","skipped"};
+    char  *preposition[] = {"to", "from", "over", "under","on"};
+    int i;
+    //use in for loop
+    for(i=0;i<20;i++)
+    {
+        strcpy(articles,article[rand()&4]);// randomly generating a string
+        articles[0] = toupper(articles[0]);// changing first value to upper case value
+        fprintf(fp,"%s %s %s %s %s %s.\n",articles,noun[rand()&4],verb[rand()&4],preposition[rand()&4],article[rand()&4],noun[rand()&4]);
+    }
+}
