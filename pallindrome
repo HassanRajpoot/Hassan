@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char str[60];
+    char b [60];
+    printf("Enter the number or characters for checking pallindrome: ");
+    scanf("%s",&str);
+    strcpy(b ,str);
+    strrev(b);
+    printf("The given string is =%s\n",str); 
+    if(strcmp(str,b) == 0){
+        printf("This string is pallindrome:%s\n",str);
+    }
+    else{
+     printf("This string is not a pallindrome:%s\n",str);
+    }
+	return 0;
+}
+
