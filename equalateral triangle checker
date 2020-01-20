@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("if value is 1 then it equalateral otherwise scalent");
+    int a,b,c,e;
+	printf("Enter side of triangle");
+    scanf("%d", &a);
+    printf("Enter side of triangle");
+    scanf("%d", &b);
+    printf("Enter side of triangle");
+    scanf("%d", &c);
+    e = b==a && c==a ;
+    printf("%d\n",e);
+	return 0;
+}
