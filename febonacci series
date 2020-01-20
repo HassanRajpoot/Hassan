@@ -1,0 +1,27 @@
+# include <stdio.h>
+int feb_series(int n)
+{
+    int total;
+    int  number =0;
+    int number_1 =1;
+    int i =0;
+    re_enter:
+    if(n>i)
+    {
+        printf("%d\n",number);
+        number=number_1;
+        total=number+number_1;
+        number_1= total;
+        n = n-1;
+        goto re_enter;
+    }
+    return(1);
+}
+int main()
+{
+    int series;
+    printf("Enter number to see how much long you want see series:");
+    scanf("%d",&series);
+    printf("This is the series:%d\n",feb_series(series));
+    return(0);
+}
