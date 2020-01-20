@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char arr[] = "(555)555-5555";
+    char *token,*mid,*last_4,phone[60] = {};
+    long int phone_number;
+    int area_code;
+    token = strtok(arr,"()");
+    mid = strtok(NULL,"-");
+    last_4 = strtok(NULL,"-");
+    strcat(phone,token);
+    strcat(phone,last_4);
+    phone_number = atol(phone);
+    area_code = atoi(token);
+    printf("Area code is %d and the number is %d",area_code,phone_number);
+}
