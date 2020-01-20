@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int choice;
+    int i;
+    char Pname[32] ;
+    int Pscore =0;
+    int Cscore =0;
+    srand(time(NULL));
+    printf("Rock=1\nPaper= 2\nScissors= 3\n");
+    printf("Enter your name \n");
+    scanf("%[^\n]",&Pname);
+
+    for(i=1;i<=3;i++){
+        printf("Enter your choice: ");
+        scanf("%d",&choice);
+            int computer=rand()&3;
+            if(choice==1){
+                if(computer==1){
+                    printf("Draw\n");
+                }
+                if(computer==2){
+                    printf("Computer Wins!\n");
+                    Cscore++;
+                }
+                if(computer==3){
+                    printf("Player Wins\n");
+                    Pscore++;
+                }
+            }
+              else  if(choice==2){
+                    if(computer==2){
+                        printf("Draw\n");
+                    }
+                    if(computer==3){
+                        printf("Player Wins!\n");
+
+                        Pscore++;
+                    }
+                    if(computer==1){
+                        printf("Computer Wins!\n");
+                        Cscore++;
+                    }
+                }
+                else if(choice==3){
+                    if(computer==3){
+                        printf("Draw\n");
+                    }
+                    if(computer==2){
+                        printf("Computer Wins!\n");
+                        Cscore++;
+                    }
+                    if(computer==1){
+                        printf("Player Wins!\n");
+                        Pscore++;
+
+                    }
+                }
+        else{
+            printf("Wrong Answer\n");
+        }
+
+            }
+            if(Cscore > Pscore ){
+                printf("Computer wins %d to %d\n",Cscore,Pscore);
+            }
+            else if(Cscore < Pscore ){
+                printf("%s wins %d to %d\n",Pname,Pscore,Cscore);
+            }
+           else if(Cscore = Pscore ){
+                printf("No winner it is a draw!\n");
+            }
+
+
+
+    return 0;
+}
